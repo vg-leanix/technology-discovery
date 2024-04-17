@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
+# TODO: add to GitHub context params
 TOKEN = os.getenv("TOKEN")
 BASE_URL = os.getenv("BASE_URL")
 HOST = os.getenv("HOST")
@@ -35,7 +35,6 @@ def authenticate(apitoken: str = TOKEN):
 def send_yaml(bearer_token: str):
 
     # Load YAML file
-    # check https://gist.github.com/vg-leanix/70999f4705fd8ed930871ea4c8cc8864
     with open('leanix.yaml', 'r') as stream:
         try:
             manifest_data = yaml.safe_load(stream)
@@ -68,6 +67,7 @@ def send_yaml(bearer_token: str):
 
     # Repository URL is used as the identifier for the microservice
 
+    # TODO: change to GitHub context
     repository_url = os.getenv('REPOSITORY_URL')
     external_id = "vg-leanix/technology-discovery" + "/"+api_data['name']
 
