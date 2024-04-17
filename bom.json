@@ -1,0 +1,1525 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:b215c6a3-85b9-40da-83d1-ba30270f035b",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-04-17T09:14:59Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "10.4.1",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@10.4.1",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@10.4.1",
+          "author": "OWASP Foundation",
+          "publisher": "OWASP Foundation"
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "technology-discovery",
+      "version": "latest",
+      "type": "application",
+      "bom-ref": "pkg:pypi/technology-discovery@latest",
+      "purl": "pkg:pypi/technology-discovery@latest"
+    }
+  },
+  "components": [
+    {
+      "group": "",
+      "name": "pyyaml",
+      "version": "6.0.1",
+      "purl": "pkg:pypi/pyyaml@6.0.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "async-timeout",
+      "version": "4.0.3",
+      "purl": "pkg:pypi/async-timeout@4.0.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/async-timeout@4.0.3",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "asyncpg",
+      "version": "0.29.0",
+      "purl": "pkg:pypi/asyncpg@0.29.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/asyncpg@0.29.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "attrs",
+      "version": "23.1.0",
+      "purl": "pkg:pypi/attrs@23.1.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/attrs@23.1.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "chardet",
+      "version": "5.2.0",
+      "purl": "pkg:pypi/chardet@5.2.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/chardet@5.2.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "databases",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/databases@0.8.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/databases@0.8.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "SQLAlchemy",
+      "version": "1.4.50",
+      "purl": "pkg:pypi/sqlalchemy@1.4.50",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sqlalchemy@1.4.50",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "greenlet",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/greenlet@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/greenlet@3.0.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "fastapi",
+      "version": "0.104.1",
+      "purl": "pkg:pypi/fastapi@0.104.1",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/fastapi@0.104.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "anyio",
+      "version": "3.7.1",
+      "purl": "pkg:pypi/anyio@3.7.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/anyio@3.7.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "idna",
+      "version": "3.4",
+      "purl": "pkg:pypi/idna@3.4",
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.4",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "sniffio",
+      "version": "1.3.0",
+      "purl": "pkg:pypi/sniffio@1.3.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sniffio@1.3.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "pydantic",
+      "version": "2.5.1",
+      "purl": "pkg:pypi/pydantic@2.5.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.5.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "annotated-types",
+      "version": "0.6.0",
+      "purl": "pkg:pypi/annotated-types@0.6.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-types@0.6.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "pydantic-core",
+      "version": "2.14.3",
+      "purl": "pkg:pypi/pydantic-core@2.14.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic-core@2.14.3",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "typing-extensions",
+      "version": "4.8.0",
+      "purl": "pkg:pypi/typing-extensions@4.8.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.8.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "starlette",
+      "version": "0.27.0",
+      "purl": "pkg:pypi/starlette@0.27.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/starlette@0.27.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "httptools",
+      "version": "0.6.1",
+      "purl": "pkg:pypi/httptools@0.6.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/httptools@0.6.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "httpx",
+      "version": "0.25.1",
+      "purl": "pkg:pypi/httpx@0.25.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx@0.25.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "certifi",
+      "version": "2023.11.17",
+      "purl": "pkg:pypi/certifi@2023.11.17",
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2023.11.17",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "httpcore",
+      "version": "1.0.2",
+      "purl": "pkg:pypi/httpcore@1.0.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpcore@1.0.2",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "h11",
+      "version": "0.14.0",
+      "purl": "pkg:pypi/h11@0.14.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/h11@0.14.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "lazy-object-proxy",
+      "version": "1.9.0",
+      "purl": "pkg:pypi/lazy-object-proxy@1.9.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/lazy-object-proxy@1.9.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "more-itertools",
+      "version": "10.1.0",
+      "purl": "pkg:pypi/more-itertools@10.1.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/more-itertools@10.1.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "psycopg2-binary",
+      "version": "2.9.9",
+      "purl": "pkg:pypi/psycopg2-binary@2.9.9",
+      "type": "library",
+      "bom-ref": "pkg:pypi/psycopg2-binary@2.9.9",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "py",
+      "version": "1.11.0",
+      "purl": "pkg:pypi/py@1.11.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/py@1.11.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "pylint",
+      "version": "3.0.2",
+      "purl": "pkg:pypi/pylint@3.0.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pylint@3.0.2",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "platformdirs",
+      "version": "4.0.0",
+      "purl": "pkg:pypi/platformdirs@4.0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/platformdirs@4.0.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "astroid",
+      "version": "3.0.1",
+      "purl": "pkg:pypi/astroid@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/astroid@3.0.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "isort",
+      "version": "5.12.0",
+      "purl": "pkg:pypi/isort@5.12.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/isort@5.12.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "mccabe",
+      "version": "0.7.0",
+      "purl": "pkg:pypi/mccabe@0.7.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/mccabe@0.7.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "tomlkit",
+      "version": "0.12.3",
+      "purl": "pkg:pypi/tomlkit@0.12.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/tomlkit@0.12.3",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "dill",
+      "version": "0.3.7",
+      "purl": "pkg:pypi/dill@0.3.7",
+      "type": "library",
+      "bom-ref": "pkg:pypi/dill@0.3.7",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "pyparsing",
+      "version": "3.1.1",
+      "purl": "pkg:pypi/pyparsing@3.1.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyparsing@3.1.1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "pytest",
+      "version": "7.4.3",
+      "purl": "pkg:pypi/pytest@7.4.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytest@7.4.3",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "iniconfig",
+      "version": "2.0.0",
+      "purl": "pkg:pypi/iniconfig@2.0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/iniconfig@2.0.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "packaging",
+      "version": "23.2",
+      "purl": "pkg:pypi/packaging@23.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/packaging@23.2",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "pluggy",
+      "version": "1.3.0",
+      "purl": "pkg:pypi/pluggy@1.3.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pluggy@1.3.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "python-dotenv",
+      "version": "1.0.0",
+      "purl": "pkg:pypi/python-dotenv@1.0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-dotenv@1.0.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "pytz",
+      "version": "2023.3.post1",
+      "purl": "pkg:pypi/pytz@2023.3.post1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytz@2023.3.post1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "requests",
+      "version": "2.31.0",
+      "purl": "pkg:pypi/requests@2.31.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/requests@2.31.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "charset-normalizer",
+      "version": "3.3.2",
+      "purl": "pkg:pypi/charset-normalizer@3.3.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/charset-normalizer@3.3.2",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "urllib3",
+      "version": "2.1.0",
+      "purl": "pkg:pypi/urllib3@2.1.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/urllib3@2.1.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "six",
+      "version": "1.16.0",
+      "purl": "pkg:pypi/six@1.16.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/six@1.16.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "uvicorn",
+      "version": "0.24.0.post1",
+      "purl": "pkg:pypi/uvicorn@0.24.0.post1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/uvicorn@0.24.0.post1",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "click",
+      "version": "8.1.7",
+      "purl": "pkg:pypi/click@8.1.7",
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.1.7",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 0.8,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.8,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "SrcFile",
+          "value": "/Users/vincent.groves/Documents/coding/technology-discovery/requirements.txt"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "uvloop",
+      "version": "0.19.0",
+      "purl": "pkg:pypi/uvloop@0.19.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/uvloop@0.19.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "wcwidth",
+      "version": "0.2.12",
+      "purl": "pkg:pypi/wcwidth@0.2.12",
+      "type": "library",
+      "bom-ref": "pkg:pypi/wcwidth@0.2.12",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "websockets",
+      "version": "12.0",
+      "purl": "pkg:pypi/websockets@12.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/websockets@12.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "group": "",
+      "name": "wrapt",
+      "version": "1.16.0",
+      "purl": "pkg:pypi/wrapt@1.16.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/wrapt@1.16.0",
+      "evidence": {
+        "identity": {
+          "field": "purl",
+          "confidence": 1,
+          "methods": [
+            {
+              "technique": "instrumentation",
+              "confidence": 1,
+              "value": "/Users/vincent.groves/Documents/coding/technology-discovery/env"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/technology-discovery@latest",
+      "dependsOn": [
+        "pkg:pypi/pyyaml@6.0.1",
+        "pkg:pypi/async-timeout@4.0.3",
+        "pkg:pypi/asyncpg@0.29.0",
+        "pkg:pypi/attrs@23.1.0",
+        "pkg:pypi/chardet@5.2.0",
+        "pkg:pypi/databases@0.8.0",
+        "pkg:pypi/fastapi@0.104.1",
+        "pkg:pypi/httptools@0.6.1",
+        "pkg:pypi/httpx@0.25.1",
+        "pkg:pypi/lazy-object-proxy@1.9.0",
+        "pkg:pypi/more-itertools@10.1.0",
+        "pkg:pypi/psycopg2-binary@2.9.9",
+        "pkg:pypi/py@1.11.0",
+        "pkg:pypi/pydantic-core@2.14.3",
+        "pkg:pypi/pylint@3.0.2",
+        "pkg:pypi/pyparsing@3.1.1",
+        "pkg:pypi/pytest@7.4.3",
+        "pkg:pypi/python-dotenv@1.0.0",
+        "pkg:pypi/pytz@2023.3.post1",
+        "pkg:pypi/requests@2.31.0",
+        "pkg:pypi/six@1.16.0",
+        "pkg:pypi/typing-extensions@4.8.0",
+        "pkg:pypi/uvicorn@0.24.0.post1",
+        "pkg:pypi/uvloop@0.19.0",
+        "pkg:pypi/wcwidth@0.2.12",
+        "pkg:pypi/websockets@12.0",
+        "pkg:pypi/wrapt@1.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pyyaml@6.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/async-timeout@4.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/asyncpg@0.29.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/attrs@23.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/chardet@5.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/sqlalchemy@1.4.50",
+      "dependsOn": [
+        "pkg:pypi/greenlet@3.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/greenlet@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/databases@0.8.0",
+      "dependsOn": [
+        "pkg:pypi/sqlalchemy@1.4.50"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/anyio@3.7.1",
+      "dependsOn": [
+        "pkg:pypi/idna@3.4",
+        "pkg:pypi/sniffio@1.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/idna@3.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/sniffio@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pydantic@2.5.1",
+      "dependsOn": [
+        "pkg:pypi/annotated-types@0.6.0",
+        "pkg:pypi/pydantic-core@2.14.3",
+        "pkg:pypi/typing-extensions@4.8.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/annotated-types@0.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pydantic-core@2.14.3",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.8.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/starlette@0.27.0",
+      "dependsOn": [
+        "pkg:pypi/anyio@3.7.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/fastapi@0.104.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@3.7.1",
+        "pkg:pypi/pydantic@2.5.1",
+        "pkg:pypi/starlette@0.27.0",
+        "pkg:pypi/typing-extensions@4.8.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/httptools@0.6.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/certifi@2023.11.17",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpcore@1.0.2",
+      "dependsOn": [
+        "pkg:pypi/certifi@2023.11.17",
+        "pkg:pypi/h11@0.14.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/h11@0.14.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpx@0.25.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@3.7.1",
+        "pkg:pypi/certifi@2023.11.17",
+        "pkg:pypi/httpcore@1.0.2",
+        "pkg:pypi/idna@3.4",
+        "pkg:pypi/sniffio@1.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/lazy-object-proxy@1.9.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/more-itertools@10.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/psycopg2-binary@2.9.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/py@1.11.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/platformdirs@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/astroid@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/isort@5.12.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/mccabe@0.7.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/tomlkit@0.12.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/dill@0.3.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pylint@3.0.2",
+      "dependsOn": [
+        "pkg:pypi/astroid@3.0.1",
+        "pkg:pypi/dill@0.3.7",
+        "pkg:pypi/isort@5.12.0",
+        "pkg:pypi/mccabe@0.7.0",
+        "pkg:pypi/platformdirs@4.0.0",
+        "pkg:pypi/tomlkit@0.12.3"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pyparsing@3.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/iniconfig@2.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/packaging@23.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pluggy@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pytest@7.4.3",
+      "dependsOn": [
+        "pkg:pypi/iniconfig@2.0.0",
+        "pkg:pypi/packaging@23.2",
+        "pkg:pypi/pluggy@1.3.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/python-dotenv@1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pytz@2023.3.post1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/charset-normalizer@3.3.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/urllib3@2.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/requests@2.31.0",
+      "dependsOn": [
+        "pkg:pypi/certifi@2023.11.17",
+        "pkg:pypi/charset-normalizer@3.3.2",
+        "pkg:pypi/idna@3.4",
+        "pkg:pypi/urllib3@2.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/six@1.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/click@8.1.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/uvicorn@0.24.0.post1",
+      "dependsOn": [
+        "pkg:pypi/click@8.1.7",
+        "pkg:pypi/h11@0.14.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/uvloop@0.19.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/wcwidth@0.2.12",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/websockets@12.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/wrapt@1.16.0",
+      "dependsOn": []
+    }
+  ]
+}
