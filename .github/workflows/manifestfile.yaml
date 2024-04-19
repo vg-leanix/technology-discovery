@@ -6,12 +6,13 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  LEANIX_API_TOKEN: ${{ secrets.LEANIX_API_TOKEN }}
+  LEANIX_SUBDOMAIN: ${{ vars.LEANIX_SUBDOMAIN }}
+
 jobs:
   update_microservice:
     runs-on: ubuntu-latest
-    env:
-      LEANIX_API_TOKEN: ${{ secrets.LEANIX_API_TOKEN }}
-      LEANIX_SUBDOMAIN: ${{ vars.LEANIX_SUBDOMAIN }}
 
     steps:
       - name: Checkout code
