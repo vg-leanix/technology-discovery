@@ -106,8 +106,10 @@ def _create_or_update_micro_services(microservice: dict, factsheet_id:str, creat
     headers = {
         'Authorization': auth_header,
     }
+    logging.info(f'Fetching access token for {LEANIX_FQDN}')
     response = requests.request(method=method, headers=headers, url=url, json=microservice)
     response.raise_for_status()
+    logging.info('Successfully fetched access token')
     return response
     
     
@@ -129,12 +131,14 @@ def create_or_update_micro_services(microservices: list):
             # Get the fact sheet id in order to perform the update.
             factsheet_id = response.json().get('data').get('factSheetId')
             crud_response = _create_or_update_micro_services(microservice, factsheet_id)
-            logging.debug(f'Updated Microservice: {json.dumps(crud_response.json())}')
+            logging.info(f'Updated Microservice: {microservice.get('externalId')}')
+            logging.debug(f'Response: {json.dumps(crud_response.json())}')
         elif response.status_code == 404:
             # Microservice does not exist, create it
             crud_response = _create_or_update_micro_services(microservice, create=True)
             logging.info(f'Microservice {microservice.get('externalId')} does not exist, creating')
             factsheet_id = crud_response.json().get('data').get('factSheetId')
+            logging.info(f'Created Microservice: {microservice.get('externalId')}')
             logging.debug(f'Created Microservice: {json.dumps(crud_response.json())}')
         else:
             logging.error(f'Microservice check failed with: {response.status_code}, {response.content}')
