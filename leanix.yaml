@@ -1,10 +1,11 @@
 version: 1
 services:
   - name: payments-service-v2
-    externalId: demo/payments-service-v2
+    externalId: payments-service-v2
     description: |
       A microservice responsible for payment processing.
       This service handles various payment transactions and is an integral part of our payment ecosystem.
+      NOTE: This is an updated service
 
     applications:
       - factSheetId: fa787383-7233-4896-8fad-c1f1bef30dd2
@@ -25,5 +26,4 @@ services:
 
     teams:
       - name: team-geld
-        factSheetId: 123123998d6
-        externalId: teamGeld
+        factSheetId: afd1ee0f-095b-4c68-88f6-d3628070ce18

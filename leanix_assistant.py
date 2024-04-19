@@ -86,7 +86,7 @@ def _parse_manifest_file() -> dict:
         micro_services.append(api_data)
     return micro_services
 
-def _create_or_update_micro_services(microservice: dict, create: bool=False) -> requests.Response:
+def _create_or_update_micro_services(microservice: dict, factsheet_id:str, create: bool=False) -> requests.Response:
     """Creates or Updates the LeanIX Microservice Fact Sheet
 
     Args:
@@ -97,6 +97,8 @@ def _create_or_update_micro_services(microservice: dict, create: bool=False) -> 
         requests.Response: The response of the request for further processing.
     """
     url = f'{LEANIX_MICROSERVICES}'
+    if not create:
+        url = f'{url}/{factsheet_id}'
     method = 'POST' if create is True else 'PUT'
     # Fetch the access token and set the Authorization Header
     auth_header = f'Bearer {os.environ.get('LEANIX_ACCESS_TOKEN')}'
@@ -112,8 +114,7 @@ def _create_or_update_micro_services(microservice: dict, create: bool=False) -> 
 def create_or_update_micro_services(microservices: list):
     for microservice in microservices:
         factsheet_id = None
-        encoded_external_id = quote(str(microservice.get('externalId')), safe='')
-        encoded_external_id = md5(encoded_external_id)
+        encoded_external_id = microservice.get('externalId')
         url = f'{LEANIX_MICROSERVICES}/externalId/{encoded_external_id}'
         # Fetch the access token and set the Authorization Header
         auth_header = f'Bearer {os.environ.get('LEANIX_ACCESS_TOKEN')}'
@@ -125,18 +126,21 @@ def create_or_update_micro_services(microservices: list):
         if response.status_code == 200:
             # Micro Service exists, update
             logging.info(f'Microservice {microservice.get('externalId')} exists, updating')
-            response = _create_or_update_micro_services(microservice)
+            # Get the fact sheet id in order to perform the update.
             factsheet_id = response.json().get('data').get('factSheetId')
+            crud_response = _create_or_update_micro_services(microservice, factsheet_id)
+            logging.debug(f'Updated Microservice: {json.dumps(crud_response.json())}')
         elif response.status_code == 404:
             # Microservice does not exist, create it
-            _create_or_update_micro_services(microservice, create=True)
+            crud_response = _create_or_update_micro_services(microservice, create=True)
             logging.info(f'Microservice {microservice.get('externalId')} does not exist, creating')
-            factsheet_id = response.json().get('data').get('factSheetId')
+            factsheet_id = crud_response.json().get('data').get('factSheetId')
+            logging.debug(f'Created Microservice: {json.dumps(crud_response.json())}')
         else:
             logging.error(f'Microservice check failed with: {response.status_code}, {response.content}')
             response.raise_for_status()
-        if factsheet_id:
-            register_sboms(factsheet_id)
+        # if factsheet_id:
+        #     register_sboms(factsheet_id)
             
     
 def register_sboms(factsheet_id: str) -> bool:
