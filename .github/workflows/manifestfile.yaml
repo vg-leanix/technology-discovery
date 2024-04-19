@@ -9,8 +9,6 @@ on:
 jobs:
   update_microservice:
     runs-on: ubuntu-latest
-    env:
-      REPOSITORY_URL: ${{ github.repositoryUrl }}
 
     steps:
       - name: Checkout code
@@ -26,4 +24,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pyyaml
       - name: Run script
-        run: python setup.py
+        run: python leanix_assistant.py

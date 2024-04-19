@@ -25,5 +25,4 @@ services:
         description: Confluence documentation
 
     teams:
-      - name: team-geld
-        factSheetId: afd1ee0f-095b-4c68-88f6-d3628070ce18
+      - factSheetId: afd1ee0f-095b-4c68-88f6-d3628070ce18
