@@ -1,3 +1,4 @@
+from hashlib import md5
 import logging
 from pathlib import Path
 import yaml
@@ -6,15 +7,15 @@ import json
 import os
 from urllib.parse import quote
 
-logging.basisConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 # Request timeout
 TIMEOUT = 10
 
 # API token and Subdomain are set as env variables.
 # It is adviced not to hard code sensitive information in your code.
-LEANIX_API_TOKEN = os.getenv('TOKEN')
-LEANIX_SUBDOMAIN = os.getenv('BASE_URL')
+LEANIX_API_TOKEN = os.getenv('LEANIX_API_TOKEN')
+LEANIX_SUBDOMAIN = os.getenv('LEANIX_SUBDOMAIN')
 LEANIX_FQDN = f'https://{LEANIX_SUBDOMAIN}.leanix.net/services'
 LEANIX_MANIFEST_FILE = os.getenv('LEANIX_MANIFEST_FILE', 'leanix.yaml')
 
@@ -55,6 +56,7 @@ def _parse_manifest_file() -> dict:
     """
     with open(LEANIX_MANIFEST_FILE, 'r') as file:
         try:
+            logging.info(f'Parsing manifest file: {file.name}')
             manifest_data = yaml.safe_load(file)
         except yaml.YAMLError as exc:
             logging.error(f'Failed to load Manifest file: {exc}')
@@ -66,15 +68,14 @@ def _parse_manifest_file() -> dict:
     micro_services = []
     for micro_service in manifest_microservices:
         api_data = {
-            'externalId': micro_service.get('external_id', GITHUB_REPOSITORY),
-            'name': micro_service.get('services', []).get('name'),
-            'description': micro_service.get('service'),
-            'businessApplications': [
+            'externalId': micro_service.get('externalId', GITHUB_REPOSITORY),
+            'name': micro_service.get('name'),
+            'description': micro_service.get('description'),
+            'applications': [
                 {
-                    'name': business_application.get('name'),
-                    'factSheetId': business_application.get('factsheet_id')
+                    'factSheetId': application.get('factSheetId')
                 }
-                for business_application in micro_service.get('business_applications', [])
+                for application in micro_service.get('applications', [])
             ],
             'repository': {
                 'url': f'{GITHUB_SERVER_URL}/{GITHUB_REPOSITORY}',
@@ -111,22 +112,31 @@ def _create_or_update_micro_services(microservice: dict, create: bool=False) -> 
 def create_or_update_micro_services(microservices: list):
     for microservice in microservices:
         factsheet_id = None
-        encoded_external_id = quote(microservice.get('externalId'))
+        encoded_external_id = quote(str(microservice.get('externalId')), safe='')
+        encoded_external_id = md5(encoded_external_id)
         url = f'{LEANIX_MICROSERVICES}/externalId/{encoded_external_id}'
-        response = requests.get(url, timeout=TIMEOUT)
+        # Fetch the access token and set the Authorization Header
+        auth_header = f'Bearer {os.environ.get('LEANIX_ACCESS_TOKEN')}'
+        # Provide the headers
+        headers = {
+            'Authorization': auth_header,
+        }
+        response = requests.get(url, headers=headers, timeout=TIMEOUT)
         if response.status_code == 200:
             # Micro Service exists, update
             logging.info(f'Microservice {microservice.get('externalId')} exists, updating')
             response = _create_or_update_micro_services(microservice)
-            factsheet_id = response.data.get('data').get('factSheetId')
+            factsheet_id = response.json().get('data').get('factSheetId')
         elif response.status_code == 404:
             # Microservice does not exist, create it
             _create_or_update_micro_services(microservice, create=True)
             logging.info(f'Microservice {microservice.get('externalId')} does not exist, creating')
-            factsheet_id = response.data.get('data').get('factSheetId')
-        else: 
+            factsheet_id = response.json().get('data').get('factSheetId')
+        else:
+            logging.error(f'Microservice check failed with: {response.status_code}, {response.content}')
             response.raise_for_status()
-        register_sboms(factsheet_id)
+        if factsheet_id:
+            register_sboms(factsheet_id)
             
     
 def register_sboms(factsheet_id: str) -> bool:
