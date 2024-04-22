@@ -115,7 +115,6 @@ def _create_or_update_micro_services(microservice: dict, factsheet_id:str, creat
     headers = {
         'Authorization': auth_header,
     }
-    import ipdb; ipdb.set_trace()
     response = requests.request(method=method, headers=headers, url=url, json=microservice)
     response.raise_for_status()
     return response

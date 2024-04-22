@@ -17,8 +17,7 @@ services:
 
       - tagGroupName: location
         tagNames:
-          - de
-          - americas
+          - aws-eu1
 
     resources:
       - type: website
