@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "technology-discovery"
+version = "0.1.0"
+description = ""
+authors = ["Kostas Petrakis <kostas.petrakis@leanix.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyaml = "^24.4.0"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+black = "^24.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
