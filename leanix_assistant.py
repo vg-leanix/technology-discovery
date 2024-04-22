@@ -1,11 +1,9 @@
-from hashlib import md5
 import logging
 from pathlib import Path
 import yaml
 import requests
 import json
 import os
-from urllib.parse import quote
 
 logging.basicConfig(level=logging.INFO)
 
@@ -163,23 +161,22 @@ def register_sboms(factsheet_id: str) -> bool:
     url = f'{LEANIX_MICROSERVICES}/{factsheet_id}/sboms'
     sbom_contents = dict()
     logging.info(f'Processing sbom file: {sbom_path.name} for Fact Sheet: {factsheet_id}')
-    with sbom_path.open('r') as f:
-        sbom_contents = json.load(f)
+    with sbom_path.open('rb') as f:
+        sbom_contents = f.read()
         
     request_payload = {
         'sbom': (
             sbom_path.name,
-            sbom_contents,
-            'application/json'
+            sbom_contents
         )
     }
     logging.debug(f'Populated payload for SBOM: {sbom_path.name}')
     # Fetch the access token and set the Authorization Header
     auth_header = f'Bearer {os.environ.get('LEANIX_ACCESS_TOKEN')}'
     # Provide the headers
+    # NOTE: Don't set the content type, `requests` should handle this.
     headers = {
         'Authorization': auth_header,
-        'Content-Type': 'multipart/form-data'
     }
     logging.info(f'Sending sbom ingestion request for Fact Sheet: {factsheet_id}')
     response = requests.post(

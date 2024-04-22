@@ -13,6 +13,7 @@ requests = "^2.31.0"
 
 [tool.poetry.group.dev.dependencies]
 ipdb = "^0.13.13"
+black = "^24.4.0"
 
 [build-system]
 requires = ["poetry-core"]

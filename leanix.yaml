@@ -11,13 +11,13 @@ services:
       - factSheetId: fa787383-7233-4896-8fad-c1f1bef30dd2
 
     tags:
-      - tagGroupName: domain
+      - tagGroupName: Domain
         tagNames: 
-          - payment
+          - Payments
 
-      - tagGroupName: location
+      - tagGroupName: Location
         tagNames:
-          - aws-eu1
+          - AWS-EU1
 
     resources:
       - type: website
