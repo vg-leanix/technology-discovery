@@ -119,6 +119,19 @@ def _create_or_update_micro_services(microservice: dict, factsheet_id:str, creat
     
     
 def create_or_update_micro_services(microservices: list):
+    """Creates or updates the LeanIX Microservice Fact Sheet based on the provided manifest file.
+
+    This function either updates an existing microservice or registers a new one based on the HTTP response status.
+    If the response is `200`, an update is performed while a `404` status leads to registration of the microservice.
+    Once the relevant operation is complete and the corresponding fact sheet ID has been received, 
+    the function triggers the sbom ingestion request to register the relevant SBOM file with LeanIX.
+
+    Args:
+        microservices (List[dict]): A list of dictionaries, each representing a microservice.
+
+    Returns:
+        None
+    """
     for microservice in microservices:
         factsheet_id = None
         encoded_external_id = microservice.get('externalId')
@@ -152,7 +165,22 @@ def create_or_update_micro_services(microservices: list):
             register_sboms(factsheet_id)
             
     
-def register_sboms(factsheet_id: str) -> bool:
+def register_sboms(factsheet_id: str):
+    """
+    Registers the Software Bill of Materials (SBOM) file with LeanIX.
+
+    This function enables improved understanding of the dependency landscape of your microservices.
+    The SBOM provides comprehensive details about software components, their relationships, and 
+    attributes, which are crucial for managing, securing, and licensing your open-source software.
+    By registering the SBOM with LeanIX, these details can be effectively managed and tracked.
+
+    Args:
+        factsheet_id (str): The unique identifier of the microservice fact sheet. This ID is used 
+        to associate the SBOM with the corresponding microservice in LeanIX.
+
+    Returns:
+        None
+    """
     sbom_path = Path('sbom.json')
     if not sbom_path.exists():
         logging.warning('No sbom file found')
