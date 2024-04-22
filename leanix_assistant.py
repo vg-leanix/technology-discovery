@@ -81,7 +81,16 @@ def _parse_manifest_file() -> dict:
                 'url': f'{GITHUB_SERVER_URL}/{GITHUB_REPOSITORY}',
                 'status': 'ACTIVE',
                 'visibility': 'PUBLIC'
-            }
+            },
+            'tags': [
+                {
+                    'tagGroupName': tag.get('tagGroupName'),
+                    'tagNames': [
+                        tag for tag in tag.get('tagNames')
+                    ]
+                }
+                for tag in micro_service.get('tags', [])
+            ]
         }
         micro_services.append(api_data)
     return micro_services
@@ -106,10 +115,9 @@ def _create_or_update_micro_services(microservice: dict, factsheet_id:str, creat
     headers = {
         'Authorization': auth_header,
     }
-    logging.info(f'Fetching access token for {LEANIX_FQDN}')
+    import ipdb; ipdb.set_trace()
     response = requests.request(method=method, headers=headers, url=url, json=microservice)
     response.raise_for_status()
-    logging.info('Successfully fetched access token')
     return response
     
     
@@ -143,8 +151,8 @@ def create_or_update_micro_services(microservices: list):
         else:
             logging.error(f'Microservice check failed with: {response.status_code}, {response.content}')
             response.raise_for_status()
-        # if factsheet_id:
-        #     register_sboms(factsheet_id)
+        if factsheet_id:
+            register_sboms(factsheet_id)
             
     
 def register_sboms(factsheet_id: str) -> bool:
@@ -155,6 +163,7 @@ def register_sboms(factsheet_id: str) -> bool:
     
     url = f'{LEANIX_MICROSERVICES}/{factsheet_id}/sboms'
     sbom_contents = dict()
+    logging.info(f'Processing sbom file: {sbom_path.name} for Fact Sheet: {factsheet_id}')
     with sbom_path.open('r') as f:
         sbom_contents = json.load(f)
         
@@ -173,6 +182,7 @@ def register_sboms(factsheet_id: str) -> bool:
         'Authorization': auth_header,
         'Content-Type': 'multipart/form-data'
     }
+    logging.info(f'Sending sbom ingestion request for Fact Sheet: {factsheet_id}')
     response = requests.post(
         url, 
         headers=headers,
@@ -180,6 +190,7 @@ def register_sboms(factsheet_id: str) -> bool:
         timeout=TIMEOUT
     )
     response.raise_for_status()
+    logging.info(f'Successfully submited sbom request for Fact Sheet: {factsheet_id}')
     
 def main():
     """LeanIX helper to parse the manifest file create or update a microservice

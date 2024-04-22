@@ -12,10 +12,11 @@ services:
 
     tags:
       - tagGroupName: domain
-        tagValue: payment
+        tagNames: 
+          - payment
 
       - tagGroupName: location
-        tagValue:
+        tagNames:
           - de
           - americas
 
