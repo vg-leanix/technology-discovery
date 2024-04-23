@@ -88,6 +88,21 @@ def _parse_manifest_file() -> dict:
                     ]
                 }
                 for tag in micro_service.get('tags', [])
+            ],
+            'teams': [
+                {
+                    'factSheetId': team
+                }
+                for team in micro_service.get('teams', [])
+            ],
+            'resources': [
+                {
+                    'name': resource.get('name'),
+                    'type': resource.get('type'),
+                    'url': resource.get('url'),
+                    'description': resource.get('description')
+                }
+                for resource in micro_service.get('resources', [])
             ]
         }
         micro_services.append(api_data)
