@@ -94,6 +94,15 @@ def _parse_manifest_file() -> dict:
                     'factSheetId': team
                 }
                 for team in micro_service.get('teams', [])
+            ],
+            'resources': [
+                {
+                    'name': resource.get('name'),
+                    'type': resource.get('type'),
+                    'url': resource.get('url'),
+                    'description': resource.get('description')
+                }
+                for resource in micro_service.get('resources', [])
             ]
         }
         micro_services.append(api_data)
@@ -120,7 +129,6 @@ def _create_or_update_micro_services(microservice: dict, factsheet_id:str, creat
         'Authorization': auth_header,
     }
     response = requests.request(method=method, headers=headers, url=url, json=microservice)
-    import ipdb; ipdb.set_trace()
     response.raise_for_status()
     return response
     

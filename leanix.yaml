@@ -17,13 +17,10 @@ services:
       - tagGroupName: Location
         tagNames:
           - AWS-EU1
-    
-    teams:
-      - afd1ee0f-095b-4c68-88f6-d3628070ce18
-      - 63eda74c-57f7-4768-b1c9-3b2813b11504
 
     resources:
-      - type: website
+      - name: Payments Process Flow
+        type: documentation
         url: https://myorg.atlassian.net/wiki/spaces/payment
-        description: Confluence documentation
+        description: Payments process flow and diagrams
 
