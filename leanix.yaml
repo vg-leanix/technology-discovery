@@ -17,7 +17,6 @@ services:
       - tagGroupName: Location
         tagNames:
           - AWS-EU2
-          - AWS-EU1
     
     teams:
       - factSheetId: 63eda74c-57f7-4768-b1c9-3b2813b11504
