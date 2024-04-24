@@ -149,15 +149,20 @@ def create_or_update_micro_services(microservices: list):
     """
     for microservice in microservices:
         factsheet_id = None
-        encoded_external_id = microservice.get('externalId')
-        url = f'{LEANIX_MICROSERVICES}/externalId/{encoded_external_id}'
+        params = {'externalId': microservice.get('externalId')}
+        url = f'{LEANIX_MICROSERVICES}'
         # Fetch the access token and set the Authorization Header
         auth_header = f'Bearer {os.environ.get('LEANIX_ACCESS_TOKEN')}'
         # Provide the headers
         headers = {
             'Authorization': auth_header,
         }
-        response = requests.get(url, headers=headers, timeout=TIMEOUT)
+        response = requests.get(
+            url,
+            params=params,
+            headers=headers,
+            timeout=TIMEOUT
+        )
         if response.status_code == 200:
             # Micro Service exists, update
             logging.info(f'Microservice {microservice.get('externalId')} exists, updating')
