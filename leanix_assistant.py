@@ -8,7 +8,7 @@ import os
 logging.basicConfig(level=logging.INFO)
 
 # Request timeout
-TIMEOUT = 10
+TIMEOUT = 20
 
 # API token and Subdomain are set as env variables.
 # It is adviced not to hard code sensitive information in your code.
@@ -91,7 +91,7 @@ def _parse_manifest_file() -> dict:
             ],
             'teams': [
                 {
-                    'factSheetId': team
+                    'factSheetId': team.get('factSheetId')
                 }
                 for team in micro_service.get('teams', [])
             ],
@@ -168,7 +168,7 @@ def create_or_update_micro_services(microservices: list):
             logging.debug(f'Response: {json.dumps(crud_response.json())}')
         elif response.status_code == 404:
             # Microservice does not exist, create it
-            crud_response = _create_or_update_micro_services(microservice, create=True)
+            crud_response = _create_or_update_micro_services(microservice, factsheet_id=None, create=True)
             logging.info(f'Microservice {microservice.get('externalId')} does not exist, creating')
             factsheet_id = crud_response.json().get('data').get('factSheetId')
             logging.info(f'Created Microservice: {microservice.get('externalId')}')
