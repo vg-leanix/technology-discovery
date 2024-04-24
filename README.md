@@ -4,6 +4,8 @@
 
 This project provides a demonstration on how to register Microservices in LeanIX, including their dependencies as Software Bill of Materials (SBOMS). The primary focus is to showcase the usage of a manifest file (YAML file) within a CI/CD environment and the LeanIX APIs to facilitate the registration process.
 
+Testing
+
 ## Key Features
 
 - **Manifest File**: A YAML file that contains all the necessary data to successfully register the microservice and generate the corresponding LeanIX Microservice fact sheet.
