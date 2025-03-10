@@ -1,30 +1,4 @@
-version: 1
-services:
-  - name: disputes-service-v1
-    externalId: disputes-service-v1
-    description: |
-      A microservice responsible for payment disputes.
-      This service handles payment transaction disputes and is an integral part of our payment ecosystem.
-
-    applications:
-      - factSheetId: fa787383-7233-4896-8fad-c1f1bef30dd2
-
-    tags:
-      - tagGroupName: Domain
-        tagNames: 
-          - Payments
-
-      - tagGroupName: Location
-        tagNames:
-          - AWS-EU2
-    
-    teams:
-      - factSheetId: 63eda74c-57f7-4768-b1c9-3b2813b11504
-      - factSheetId: afd1ee0f-095b-4c68-88f6-d3628070ce18
-
-    resources:
-      - name: Disputes Process Flow
-        type: documentation
-        url: https://myorg.atlassian.net/wiki/spaces/disputes
-        description: Disputes process flow and diagrams
-
+# LeanIX Configuration
+# This file contains the LeanIX configuration for the repository
+version: 1.0
+lastUpdated: 2025-03-10T18:32:15.785Z
